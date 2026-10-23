@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.clinicai.ui.home.HomeFragment"
+        android:label="@string/nav_home" />
+
+    <fragment
+        android:id="@+id/findDoctorFragment"
+        android:name="com.example.clinicai.ui.doctors.FindDoctorFragment"
+        android:label="@string/find_title">
+        <argument
+            android:name="specializationId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorDetailFragment"
+        android:name="com.example.clinicai.ui.doctors.DoctorDetailFragment"
+        android:label="@string/book_title">
+        <argument
+            android:name="doctorId"
+            app:argType="string" />
+        <deepLink app:uri="https://clinicai-555888.vercel.app/doctors/{doctorId}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingReviewFragment"
+        android:name="com.example.clinicai.ui.booking.BookingReviewFragment"
+        android:label="@string/book_review_title" />
+
+    <fragment
+        android:id="@+id/bookingConfirmationFragment"
+        android:name="com.example.clinicai.ui.booking.BookingConfirmationFragment"
+        android:label="@string/confirm_title" />
+
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.example.clinicai.ui.booking.ReceiptFragment"
+        android:label="@string/receipt_title">
+        <argument
+            android:name="appointmentId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.clinicai.ui.chat.ChatFragment"
+        android:label="@string/chat_title">
+        <argument
+            android:name="clinicId"
+            android:defaultValue="clinic_01"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myAppointmentsFragment"
+        android:name="com.example.clinicai.ui.appointments.MyAppointmentsFragment"
+        android:label="@string/appts_title" />
+
+    <fragment
+        android:id="@+id/appointmentDetailFragment"
+        android:name="com.example.clinicai.ui.appointments.AppointmentDetailFragment"
+        android:label="@string/appts_detail_title">
+        <argument
+            android:name="appointmentId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkinFragment"
+        android:name="com.example.clinicai.ui.checkin.CheckinFragment"
+        android:label="@string/checkin_title">
+        <argument
+            android:name="token"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink app:uri="https://clinicai-555888.vercel.app/checkin/{token}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/queueTicketFragment"
+        android:name="com.example.clinicai.ui.checkin.QueueTicketFragment"
+        android:label="@string/checkin_ticket_label">
+        <argument
+            android:name="doctorId"
+            app:argType="string" />
+        <argument
+            android:name="queueNumber"
+            app:argType="integer" />
+        <argument
+            android:name="doctorName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.clinicai.ui.faq.FaqFragment"
+        android:label="@string/faq_title" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.clinicai.ui.profile.ProfileFragment"
+        android:label="@string/profile_title" />
+</navigation>

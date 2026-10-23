@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/staffOverviewFragment" android:icon="@drawable/ic_home" android:title="@string/staff_nav_overview" />
+        <item android:id="@+id/staffDoctorsFragment" android:icon="@drawable/ic_doctor" android:title="@string/staff_nav_doctors" />
+        <item android:id="@+id/staffQueueFragment" android:icon="@drawable/ic_queue" android:title="@string/staff_nav_queue" />
+        <item android:id="@+id/staffAnalyticsFragment" android:icon="@drawable/ic_chart" android:title="@string/staff_nav_analytics" />
+        <item android:id="@+id/staffMembersFragment" android:icon="@drawable/ic_group" android:title="@string/staff_nav_staff" />
+        <item android:id="@+id/clinicSettingsFragment" android:icon="@drawable/ic_settings" android:title="@string/staff_nav_settings" />
+    </group>
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/action_patient_app" android:icon="@drawable/ic_arrow_back" android:title="@string/staff_nav_patient_app" />
+        <item android:id="@+id/action_staff_sign_out" android:icon="@drawable/ic_logout" android:title="@string/action_sign_out" />
+    </group>
+</menu>

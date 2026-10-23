@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_staff"
+    app:startDestination="@id/staffOverviewFragment">
+
+    <fragment
+        android:id="@+id/staffOverviewFragment"
+        android:name="com.example.clinicai.ui.staff.StaffOverviewFragment"
+        android:label="@string/staff_nav_overview" />
+
+    <fragment
+        android:id="@+id/staffDoctorsFragment"
+        android:name="com.example.clinicai.ui.staff.StaffDoctorsFragment"
+        android:label="@string/staff_nav_doctors" />
+
+    <fragment
+        android:id="@+id/staffQueueFragment"
+        android:name="com.example.clinicai.ui.staff.StaffQueueFragment"
+        android:label="@string/staff_nav_queue" />
+
+    <fragment
+        android:id="@+id/staffAnalyticsFragment"
+        android:name="com.example.clinicai.ui.staff.StaffAnalyticsFragment"
+        android:label="@string/staff_nav_analytics" />
+
+    <fragment
+        android:id="@+id/staffMembersFragment"
+        android:name="com.example.clinicai.ui.staff.StaffMembersFragment"
+        android:label="@string/staff_nav_staff" />
+
+    <fragment
+        android:id="@+id/clinicSettingsFragment"
+        android:name="com.example.clinicai.ui.staff.ClinicSettingsFragment"
+        android:label="@string/staff_nav_settings" />
+</navigation>
