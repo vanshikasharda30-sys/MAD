@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <TextView
+                style="@style/TextAppearance.ClinicAI.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/members_title" />
+
+            <TextView
+                style="@style/TextAppearance.ClinicAI.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/members_subtitle" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/inviteCard"
+                style="@style/Widget.ClinicAI.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        style="@style/TextAppearance.ClinicAI.Heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/members_invite" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inviteNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/members_invite_name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inviteNameInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName|textCapWords" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inviteEmailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/members_invite_email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inviteEmailInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/roleReception"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/min_touch"
+                            android:checked="true"
+                            android:text="@string/members_role_reception" />
+
+                        <RadioButton
+                            android:id="@+id/roleAdmin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/min_touch"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/members_role_admin" />
+                    </RadioGroup>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/inviteButton"
+                        style="@style/Widget.ClinicAI.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/members_invite_send" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <include
+                    android:id="@+id/membersState"
+                    layout="@layout/layout_state_view" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/memberList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

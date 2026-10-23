@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <!-- Hero -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hero"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/TextAppearance.ClinicAI.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tagline"
+                android:textColor="#B9C2D0" />
+
+            <TextView
+                style="@style/TextAppearance.ClinicAI.Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/home_headline"
+                android:textColor="@color/paper"
+                android:textSize="26sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/heroFind"
+                style="@style/Widget.ClinicAI.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/paper"
+                android:text="@string/home_find_doctor"
+                android:textColor="@color/ink" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/heroAsk"
+                style="@style/Widget.ClinicAI.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/home_ask_clinicai"
+                android:textColor="@color/paper"
+                app:strokeColor="#66FAF9F6" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/staffDashboardButton"
+            style="@style/Widget.ClinicAI.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/teal"
+            android:text="@string/home_staff_dashboard"
+            android:visibility="gone"
+            app:icon="@drawable/ic_group"
+            app:iconTint="@color/white" />
+
+        <!-- Quick actions -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="2"
+            android:useDefaultMargins="false">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/actionFindDoctor"
+                style="@style/Widget.ClinicAI.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="88dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_doctor"
+                        app:tint="@color/teal" />
+
+                    <TextView
+                        style="@style/TextAppearance.ClinicAI.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/home_find_doctor" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/actionAsk"
+                style="@style/Widget.ClinicAI.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="88dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_sparkle"
+                        app:tint="@color/teal" />
+
+                    <TextView
+                        style="@style/TextAppearance.ClinicAI.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/home_ask_clinicai" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/actionWalkIn"
+                style="@style/Widget.ClinicAI.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="88dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_qr"
+                        app:tint="@color/teal" />
+
+                    <TextView
+                        style="@style/TextAppearance.ClinicAI.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/home_walk_in" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/actionAppointments"
+                style="@style/Widget.ClinicAI.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="88dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_event"
+                        app:tint="@color/teal" />
+
+                    <TextView
+                        style="@style/TextAppearance.ClinicAI.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/home_my_appointments" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/actionFaq"
+                style="@style/Widget.ClinicAI.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_touch"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_help"
+                        app:tint="@color/teal" />
+
+                    <TextView
+                        style="@style/TextAppearance.ClinicAI.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/home_clinic_faq" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+
+        <!-- Why ClinicAI -->
+        <TextView
+            style="@style/TextAppearance.ClinicAI.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/home_features_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.ClinicAI.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_feature_1_title" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_feature_1_body" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/home_feature_2_title" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_feature_2_body" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/home_feature_3_title" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_feature_3_body" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/home_feature_4_title" />
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_feature_4_body" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Partner clinics -->
+        <TextView
+            style="@style/TextAppearance.ClinicAI.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/home_partner_clinics" />
+
+        <include
+            android:id="@+id/partnerState"
+            layout="@layout/layout_state_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/partnerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/seeMoreButton"
+            style="@style/Widget.ClinicAI.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/home_see_more"
+            android:visibility="gone"
+            app:icon="@drawable/ic_expand_more"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/teal" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

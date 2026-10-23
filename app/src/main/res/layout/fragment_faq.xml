@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/paper"
+        app:title="@string/faq_title"
+        app:navigationContentDescription="@string/action_back"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:titleTextAppearance="@style/TextAppearance.ClinicAI.Heading" />
+
+    <TextView
+        style="@style/TextAppearance.ClinicAI.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/screen_padding"
+        android:text="@string/faq_subtitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/clinicPicker"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/screen_padding"
+        android:hint="@string/faq_pick_clinic"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/clinicDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/faqList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="@dimen/screen_padding"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <include
+            android:id="@+id/faqState"
+            layout="@layout/layout_state_view" />
+    </FrameLayout>
+</LinearLayout>

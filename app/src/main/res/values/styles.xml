@@ -1,0 +1,78 @@
+<resources>
+    <style name="Widget.ClinicAI.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/min_touch</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="Widget.ClinicAI.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/min_touch</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="strokeColor">@color/line_strong</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.ClinicAI.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">@dimen/min_touch</item>
+        <item name="android:textColor">@color/teal</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.ClinicAI.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/teal</item>
+        <item name="hintTextColor">@color/teal</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+    <style name="Widget.ClinicAI.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="strokeColor">@color/line</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="TextAppearance.ClinicAI.Display" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ClinicAI.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ClinicAI.Heading" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ClinicAI.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/ink_70</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="TextAppearance.ClinicAI.Caption" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/ink_50</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="TextAppearance.ClinicAI.Mono" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Widget.ClinicAI.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line</item>
+    </style>
+</resources>

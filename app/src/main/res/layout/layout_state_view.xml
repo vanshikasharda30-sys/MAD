@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="160dp"
+    android:padding="24dp"
+    android:visibility="gone">
+
+    <ProgressBar
+        android:id="@+id/stateProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/teal"
+        android:contentDescription="@string/loading"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/stateEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_search"
+            app:tint="@color/ink_50" />
+
+        <TextView
+            android:id="@+id/stateEmptyTitle"
+            style="@style/TextAppearance.ClinicAI.Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/stateEmptyBody"
+            style="@style/TextAppearance.ClinicAI.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stateError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_error"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/stateErrorMessage"
+            style="@style/TextAppearance.ClinicAI.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="@color/ink" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stateRetry"
+            style="@style/Widget.ClinicAI.Button.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/action_retry" />
+    </LinearLayout>
+</FrameLayout>

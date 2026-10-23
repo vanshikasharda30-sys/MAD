@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_check_circle"
+            app:tint="@color/teal" />
+
+        <TextView
+            style="@style/TextAppearance.ClinicAI.Display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/confirm_title" />
+
+        <TextView
+            style="@style/TextAppearance.ClinicAI.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/confirm_subtitle" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.ClinicAI.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    style="@style/TextAppearance.ClinicAI.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_booking_id" />
+
+                <TextView
+                    android:id="@+id/bookingId"
+                    style="@style/TextAppearance.ClinicAI.Mono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textIsSelectable="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    style="@style/Widget.ClinicAI.Divider"
+                    android:layout_marginVertical="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/summaryRows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewReceipt"
+            style="@style/Widget.ClinicAI.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/confirm_view_receipt"
+            app:icon="@drawable/ic_pdf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveReceipt"
+                style="@style/Widget.ClinicAI.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/receipt_action_save"
+                app:icon="@drawable/ic_download" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/shareReceipt"
+                style="@style/Widget.ClinicAI.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/receipt_action_share"
+                app:icon="@drawable/ic_share" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewAppointments"
+            style="@style/Widget.ClinicAI.Button.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/confirm_view_appointments" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
