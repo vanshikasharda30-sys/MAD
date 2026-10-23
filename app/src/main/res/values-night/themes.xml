@@ -1,0 +1,4 @@
+<resources>
+    <!-- The website has a single light palette; the app keeps it in dark mode too. -->
+    <style name="Theme.ClinicAI" parent="Base.Theme.ClinicAI" />
+</resources>

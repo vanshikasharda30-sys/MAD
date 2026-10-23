@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ClinicAI brand tokens, taken from the website's globals.css -->
+    <color name="ink">#FF12233D</color>
+    <color name="ink_70">#B312233D</color>
+    <color name="ink_50">#8012233D</color>
+    <color name="paper">#FFFAF9F6</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="teal">#FF1F6F6B</color>
+    <color name="teal_soft">#1A1F6F6B</color>
+    <color name="amber">#FFA8720A</color>
+    <color name="red">#FF9E2B25</color>
+    <color name="line">#FFE4E0D6</color>
+    <color name="line_strong">#FFCFC9BA</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
