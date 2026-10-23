@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.clinicai.ui.auth.SignInFragment"
+        android:label="@string/action_sign_in" />
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.clinicai.ui.auth.SignUpFragment"
+        android:label="@string/auth_create_account" />
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.clinicai.ui.auth.ForgotPasswordFragment"
+        android:label="@string/forgot_title" />
+
+    <fragment
+        android:id="@+id/verifyCodeFragment"
+        android:name="com.example.clinicai.ui.auth.VerifyCodeFragment"
+        android:label="@string/auth_verify_action" />
+
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.example.clinicai.ui.auth.NewPasswordFragment"
+        android:label="@string/new_password_title" />
+</navigation>
