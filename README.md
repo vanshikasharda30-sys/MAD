@@ -20,7 +20,7 @@ Docs: [authentication & the sign-in fix](docs/AUTHENTICATION.md) · [architectur
 3. Press **Run ▶**. The debug build talks to the **deployed** backend by default.
 4. Command line alternative: `./gradlew assembleDebug` → `app/build/outputs/apk/debug/app-debug.apk`.
 
-### Using a local backend instead (emulator only)
+
 
 ```bash
 cd /Users/lakshaymunjal/clinicai && npm run dev        # http://localhost:3000
